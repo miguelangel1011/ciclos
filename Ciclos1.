@@ -1,0 +1,53 @@
+// ciclo 1
+var n = 67;
+var contador = 1;
+while (contador <= n){
+    if(n%contador==0){
+        console.log( contador);
+    }
+    contador++;
+}
+
+// ciclo 2
+var n = 44;
+var m = true;
+for(var i = 2; i < n / 2; i++){
+    if(n % i === 0){
+      m = false;  
+    }
+}
+if(m){
+    console.log(`${n} El numero es primo`);
+}
+else{
+    console.log(`${n}  El numero no es primo`);
+}
+
+//ciclo 3
+var n = 1000;
+var s = 0;
+var c = 0;
+for(let i = 1; i <= n; i+=1){
+    for(let n = 1; n < i; n+=1){
+        if(i % n == 0){
+            s += n;
+    }
+}
+
+//ciclo 4
+var n = 1000;
+var s = 0;
+var c = 0;
+for(let i = 1; i <= n; i+=1){
+    for(let n = 1; n < i; n+=1){
+        if(i % n == 0){
+            s += n;
+        }
+    }
+    if(s === i) {
+        console.log(`${i} es un numero perfecto`)
+        c += 1;
+    }
+    s = 0
+}
+console.log(`Hay ${c} numeros prefectos`);
